@@ -18,4 +18,8 @@ public class SpittleRepositoryImpl implements SpittleRepository {
         return spittleList;
     }
 
+    public Spittle findOne(long id) {
+        return new Spittle("Hello World! The first ever spittle!", new Date(), 0.0, 0.0);
+    }
+
 }
