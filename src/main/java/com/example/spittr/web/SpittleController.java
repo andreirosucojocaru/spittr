@@ -1,13 +1,13 @@
 package com.example.spittr.web;
 
 import com.example.spittr.Spittle;
+import com.example.spittr.data.SpittleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.example.spittr.data.SpittleRepository;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -31,15 +31,15 @@ public class SpittleController {
         return "spittles";
     }*/
 
-    @RequestMapping(method=RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public List<Spittle> spittles(
-            @RequestParam(value="max",
-                    defaultValue=MAX_LONG_AS_STRING) long max,
-            @RequestParam(value="count", defaultValue="20") int count) {
+            @RequestParam(value = "max",
+                    defaultValue = MAX_LONG_AS_STRING) long max,
+            @RequestParam(value = "count", defaultValue = "20") int count) {
         return spittleRepository.findSpittles(max, count);
     }
 
-    @RequestMapping(value="/{spittleId}", method=RequestMethod.GET)
+    @RequestMapping(value = "/{spittleId}", method = RequestMethod.GET)
     public String spittle(
             @PathVariable long spittleId,
             Model model) {

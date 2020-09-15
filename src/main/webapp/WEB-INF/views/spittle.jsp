@@ -5,13 +5,13 @@
     <title>Spittr</title>
     <link rel="stylesheet"
           type="text/css"
-          href="<c:url value="/resources/style.css" />" >
+          href="<c:url value="/resources/style.css" />">
 </head>
 <body>
 <div class="spittleView">
-    <div class="spittleMessage"><c:out value="${spittle.message}" /></div>
+    <div class="spittleMessage"><c:out value="${spittle.message}"/></div>
     <div>
-        <span class="spittleTime"><c:out value="${spittle.time}" /></span>
+        <span class="spittleTime"><c:out value="${spittle.time}"/></span>
     </div>
 </div>
 </body>

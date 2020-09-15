@@ -3,27 +3,27 @@ package com.example.spittr;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class Spitter {
 
     private Long id;
 
-    @NotNull
-    @Size(min=5, max=16)
+    @NotBlank
+    @Size(min = 5, max = 16)
     private String firstName;
 
-    @NotNull
-    @Size(min=2, max=25)
+    @NotBlank
+    @Size(min = 2, max = 25)
     private String lastName;
 
-    @NotNull
-    @Size(min=2, max=30)
+    @NotBlank
+    @Size(min = 2, max = 30)
     private String username;
 
-    @NotNull
-    @Size(min=2, max=30)
+    @NotBlank
+    @Size(min = 2, max = 30)
     private String password;
 
     public Spitter() {

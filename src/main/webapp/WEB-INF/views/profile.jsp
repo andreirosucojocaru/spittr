@@ -5,12 +5,12 @@
     <title>Spittr</title>
     <link rel="stylesheet"
           type="text/css"
-          href="<c:url value="/resources/style.css" />" >
+          href="<c:url value="/resources/style.css" />">
 </head>
 <body>
 <h1>Your Profile</h1>
-<c:out value="${spitter.username}" /><br/>
-<c:out value="${spitter.firstName}" />
-<c:out value="${spitter.lastName}" />
+<c:out value="${spitter.username}"/><br/>
+<c:out value="${spitter.firstName}"/>
+<c:out value="${spitter.lastName}"/>
 </body>
 </html>
